@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<EXTENSION VERSION="3.0">
+<LOGICS>
+<LOGICITEM NAME="SymmetryBuilderLogic">
+	<STATE NAME="SymmetryBuilderLogicState" VERSION="3.0">
+	<PROPERTIES>
+	<PROPERTY NAME="DangleBonds">
+	<VALUE>Top</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="DangleBondType">
+	<VALUE>O</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CleaveDirection">
+	<VALUE>
+	<ITEM>1</ITEM>
+	<ITEM>1</ITEM>
+	<ITEM>1</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CleaveUVector">
+	<VALUE>
+	<ITEM>1.</ITEM>
+	<ITEM>-1.</ITEM>
+	<ITEM>0.</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CleaveVVector">
+	<VALUE>
+	<ITEM>0.</ITEM>
+	<ITEM>1.</ITEM>
+	<ITEM>-1.</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CleaveOrigin">
+	<VALUE>
+	<ITEM>1.9720412</ITEM>
+	<ITEM>1.1189595</ITEM>
+	<ITEM>0.46609923</ITEM>
+	</VALUE>
+	</PROPERTY>
+	<PROPERTY NAME="CleaveDepth">
+	<VALUE>2.</VALUE>
+	</PROPERTY>
+	</PROPERTIES>
+	</STATE>
+</LOGICITEM>
+</LOGICS>
+</EXTENSION>

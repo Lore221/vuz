@@ -1,0 +1,19 @@
+%NProcLinda=1
+%nprocshared=24
+%mem=50GB
+%chk=POCl3_B3LYP_6-311g.chk
+# B3LYP/6-311g(3d2f,3p2d) SCF=Tight opt=(tight,maxcycles=300)
+freq=(raman,hpmodes) nosymm int=finegrid density
+pop=(full,bonding) iop(6/80=1)
+
+POCl3 B3LYP_6-311g
+
+0 1
+ P                 -1.77263775   -0.98807219   -1.10227059
+ Cl                -1.09266109   -2.91141089   -1.10227059
+ Cl                -1.09262598   -0.02641583    0.56338275
+ Cl                -3.81263775   -0.98804706   -1.10227059
+ O                 -1.20262788   -0.18197789   -2.49848000
+
+
+

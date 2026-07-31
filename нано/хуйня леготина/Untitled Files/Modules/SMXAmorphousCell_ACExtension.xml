@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+<EXTENSION>
+   <LOGICS>
+      <LOGICITEM NAME="ACEnergyServer0D">
+         <STATE NAME="Discover 0D Energy Server" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="ForcefieldChooser">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACForcefieldChooser</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="GATE">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACGate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="NonBondGang">
+                  <VALUE>false</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="CutOff">
+                  <VALUE>
+                     <ITEM>8.5</ITEM>
+                     <ITEM>8.5</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SummationMethod">
+                  <VALUE>
+                     <ITEM>1</ITEM>
+                     <ITEM>3</ITEM>
+                  </VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACEnergyServer3D">
+         <STATE NAME="Discover 3D Energy Server" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="ForcefieldChooser">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACForcefieldChooser</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="GATE">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACGate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="CutOff">
+                  <VALUE>
+                     <ITEM>8.5</ITEM>
+                     <ITEM>8.5</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SummationMethod">
+                  <VALUE>
+                     <ITEM>1</ITEM>
+                     <ITEM>3</ITEM>
+                  </VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACEnergyServerManager">
+         <STATE NAME="EnergyServerManager" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="0DEnergyServer">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServer0D</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="3DEnergyServer">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServer3D</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACEquilibrationMD">
+         <STATE NAME="Dynamics" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="EnergyServerManager">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServerManager</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SimJobTemplate">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACSimJobTemplate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Ensemble">
+                  <VALUE>
+                     <ITEM>2</ITEM>
+                     <ITEM>2</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Thermostat">
+                  <VALUE>1</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="TrajectorySave">
+                  <VALUE>1</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACForcefieldChooser">
+         <STATE NAME="ForcefieldChooser" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="CurrentCookie">
+                  <VALUE>{508E8292-FC35-11D3-94C9-00D0B707257C}</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="ForcefieldDescriptors">
+                  <VALUE>
+                     SMForcefields.ForcefieldDescriptors
+                     <STATE NAME="ForcefieldDescriptors" VERSION="3.0">
+                        <PROPERTIES>
+                           <PROPERTY NAME="ForcefieldDescriptors">
+                              <VALUE>
+                                 <ITEM>
+                                    SMForcefields.ForcefieldDescriptor
+                                    <STATE NAME="ForcefieldDescriptor" VERSION="3.0">
+                                       <PROPERTIES>
+                                          <PROPERTY NAME="Cookie">
+                                             <VALUE>{508E8291-FC35-11D3-94C9-00D0B707257C}</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="DisplayName">
+                                             <VALUE>pcff</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="Type">
+                                             <VALUE>129</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="PersistedAs">
+                                             <VALUE>%CORE_FOLDER%\Discover\res\pcff.frc</VALUE>
+                                          </PROPERTY>
+                                       </PROPERTIES>
+                                    </STATE>
+                                 </ITEM>
+                                 <ITEM>
+                                    SMForcefields.ForcefieldDescriptor
+                                    <STATE NAME="ForcefieldDescriptor" VERSION="3.0">
+                                       <PROPERTIES>
+                                          <PROPERTY NAME="Cookie">
+                                             <VALUE>{508E8292-FC35-11D3-94C9-00D0B707257C}</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="DisplayName">
+                                             <VALUE>compass</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="Type">
+                                             <VALUE>129</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="PersistedAs">
+                                             <VALUE>%CORE_FOLDER%\Discover\res\compass.frc</VALUE>
+                                          </PROPERTY>
+                                       </PROPERTIES>
+                                    </STATE>
+                                 </ITEM>
+                              </VALUE>
+                           </PROPERTY>
+                        </PROPERTIES>
+                     </STATE>
+                  </VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACGate">
+         <STATE NAME="Discover Forcefield Typing" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="ForcefieldChooser">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACForcefieldChooser</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACMinimizer">
+         <STATE NAME="Minimizer" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="EnergyServerManager">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServerManager</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SimJobTemplate">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACSimJobTemplate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Presentation">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!SMPAmorphousCell.PresentationACMinimize</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="MaxIterations">
+                  <VALUE>
+                     <ITEM>200</ITEM>
+                     <ITEM>5000</ITEM>
+                     <ITEM>10000</ITEM>
+                     <ITEM>20000</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SDLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SDConvergence">
+                  <VALUE>
+                     <ITEM>10.0</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.001</ITEM>
+                     <ITEM>0.00001</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartSDLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartSDConvergence">
+                  <VALUE>
+                     <ITEM>1000</ITEM>
+                     <ITEM>1000</ITEM>
+                     <ITEM>1000</ITEM>
+                     <ITEM>1000</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="CGLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="CGConvergence">
+                  <VALUE>
+                     <ITEM>10.0</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.001</ITEM>
+                     <ITEM>0.00001</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartCGLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartCGConvergence">
+                  <VALUE>
+                     <ITEM>10</ITEM>
+                     <ITEM>10</ITEM>
+                     <ITEM>10</ITEM>
+                     <ITEM>10</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="NewtonLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="NewtonConvergence">
+                  <VALUE>
+                     <ITEM>10.0</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.001</ITEM>
+                     <ITEM>0.00001</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartNewtonLineSearch">
+                  <VALUE>
+                     <ITEM>0.9</ITEM>
+                     <ITEM>0.5</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.01</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartNewtonConvergence">
+                  <VALUE>
+                     <ITEM>10.0</ITEM>
+                     <ITEM>0.1</ITEM>
+                     <ITEM>0.001</ITEM>
+                     <ITEM>0.00001</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartNewtonMaxAtoms">
+                  <VALUE>
+                     <ITEM>200</ITEM>
+                     <ITEM>200</ITEM>
+                     <ITEM>200</ITEM>
+                     <ITEM>200</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartSDUse">
+                  <VALUE>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartCGUse">
+                  <VALUE>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SmartNewtonUse">
+                  <VALUE>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                     <ITEM>true</ITEM>
+                  </VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="OptimizeCellUse">
+                  <VALUE>false</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACProductionMD">
+         <STATE NAME="Dynamics" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="EnergyServerManager">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServerManager</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SimJobTemplate">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACSimJobTemplate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="NumberOfSteps">
+                  <VALUE>100000</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Thermostat">
+                  <VALUE>3</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Barostat">
+                  <VALUE>3</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="TrajectoryFrq">
+                  <VALUE>5000</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="ACSimJobTemplate">
+         <STATE NAME="SimJobTemplate" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="ServerNameForDefaultDaemonName">
+                  <VALUE>AmorphousCellConstruct</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="LiveUpdateModel">
+                  <VALUE>false</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="LiveUpdateText">
+                  <VALUE>false</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="LiveUpdateGraphs">
+                  <VALUE>true</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="TaskOriginator">
+                  <VALUE>AC </VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="Analysis">
+         <STATE NAME="Analysis" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="EnergyServerManager">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACEnergyServerManager</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="SimJobTemplate">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!ACSimJobTemplate</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="Presentation">
+                  <VALUE>ModuleManager!SMXAmorphousCell.ACExtension!SMPAnalysis.Presentation2</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+   </LOGICS>
+</EXTENSION>

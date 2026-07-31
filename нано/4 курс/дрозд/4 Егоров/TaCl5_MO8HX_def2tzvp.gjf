@@ -1,0 +1,20 @@
+%NProcLinda=1
+%nprocshared=24
+%mem=50GB
+%chk=TaCl5_M08HX_def2tzvp.chk
+# M08HX/def2tzvp SCF=Tight opt=(tight,maxcycles=300)
+freq=(raman,hpmodes) nosymm int=finegrid density
+pop=(full,bonding) iop(6/80=1)
+
+TaCl5 M08HX_def2tzvp
+
+0 1
+ Ta                -0.38676116    0.15031369   -0.50049054
+ Cl                -0.38676116    0.15031369   -2.83049054
+ Cl                -1.55176116   -1.86752550   -0.50049054
+ Cl                 1.94323884    0.15031369   -0.50049054
+ Cl                -0.38676116    0.15031369    1.82950946
+ Cl                -1.55176116    2.16815288   -0.50049054
+
+
+

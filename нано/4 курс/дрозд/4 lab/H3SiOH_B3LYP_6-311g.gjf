@@ -1,0 +1,19 @@
+%NProcLinda=1
+%nprocshared=24
+%mem=50GB
+%chk=H3SiOH_B3LYP_6-311g.chk
+# B3LYP/6-311g(3d2f,3p2d) SCF=Tight opt=(tight,maxcycles=300)
+freq=(raman,hpmodes) nosymm int=finegrid density
+pop=(full,bonding) iop(6/80=1)
+
+H3SiOH B3LYP_6-311g
+
+0 1
+ Si                 0.46877300    0.01339600    0.00000000
+ O                 -1.18935900   -0.13756800    0.00000000
+ H                  0.97201300    0.73809300    1.20158400
+ H                  1.00255400   -1.36734700    0.00000000
+ H                  0.97201300    0.73809300   -1.20158400
+ H                 -1.69953900    0.67950200    0.00000000
+
+

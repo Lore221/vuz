@@ -1,0 +1,25 @@
+%NProcLinda=1
+%nprocshared=24
+%mem=50GB
+%chk=H3SiOTaCl4_M08HX_def2tzvp.chk
+# M08HX/def2tzvp SCF=Tight opt=(tight,maxcycles=300)
+freq=(raman,hpmodes) nosymm int=finegrid density
+pop=(full,bonding) iop(6/80=1)
+
+H3SiOTaCl4 M08HX_def2tzvp
+
+0 1
+ Si                -0.29569893    0.45698924    0.00000000
+ H                  0.19428425   -0.92894600    0.00000000
+ H                  0.19430955    1.14994750   -1.20025020
+ H                 -1.76569893    0.45700735    0.00000000
+ O                  0.31431162    1.31965157    1.49418902
+ Ta                -0.35185501    3.20544616    1.49505761
+ Cl                 1.55059176    3.87803186    0.33005772
+ Cl                -1.69145752    3.96858279   -0.25193626
+ Cl                -2.25430179    2.53286046    2.66005751
+ Cl                 0.21166336    4.63926024    3.24306340
+
+
+
+

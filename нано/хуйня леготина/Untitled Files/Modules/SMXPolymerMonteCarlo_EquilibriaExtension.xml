@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<EXTENSION VERSION="3.0">
+   <LOGICS>
+      <LOGICITEM NAME="EquilibriaForcefieldChooser">
+         <STATE NAME="ForcefieldChooser" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="CurrentCookie">
+                  <VALUE>{B24052C3-E17C-11D4-94A0-00D0B70BA755}</VALUE>
+               </PROPERTY>
+               <PROPERTY NAME="ForcefieldDescriptors">
+                  <VALUE>
+                     SMForcefields.ForcefieldDescriptors
+                     <STATE NAME="ForcefieldDescriptors" VERSION="3.0">
+                        <PROPERTIES>
+                           <PROPERTY NAME="ForcefieldDescriptors">
+                              <VALUE>
+                                 <ITEM>
+                                    SMForcefields.ForcefieldDescriptor
+                                    <STATE NAME="ForcefieldDescriptor" VERSION="3.0">
+                                       <PROPERTIES>
+                                          <PROPERTY NAME="Cookie">
+                                             <VALUE>{B24052C3-E17C-11D4-94A0-00D0B70BA755}</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="DisplayName">
+                                             <VALUE>NERD</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="Type">
+                                             <VALUE>129</VALUE>
+                                          </PROPERTY>
+                                          <PROPERTY NAME="PersistedAs">
+                                             <VALUE>%CORE_FOLDER%\Discover\res\NERD.frc</VALUE>
+                                          </PROPERTY>
+                                       </PROPERTIES>
+                                    </STATE>
+                                 </ITEM>
+                              </VALUE>
+                           </PROPERTY>
+                        </PROPERTIES>
+                     </STATE>
+                  </VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="EquilibriaGate">
+         <STATE NAME="Discover Forcefield Typing" VERSION="3.0">
+            <PROPERTIES>
+               <PROPERTY NAME="ForcefieldChooser">
+               <VALUE>ModuleManager!SMXPolymerMonteCarlo.EquilibriaExtension!EquilibriaForcefieldChooser</VALUE>
+               </PROPERTY>
+            </PROPERTIES>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="EquilibriaJobTemplate">
+         <STATE NAME="EquilibriaJobTemplate" VERSION="3.0">
+            <PROPERTIES/>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="IsingScalingLogic">
+         <STATE NAME="IsingScalingState" VERSION="3.0">
+            <PROPERTIES/>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="NPTGibbsLogic">
+         <STATE NAME="GibbsEnsembleState" VERSION="3.0">
+            <PROPERTIES/>
+         </STATE>
+      </LOGICITEM>
+      <LOGICITEM NAME="NVTGibbsLogic">
+         <STATE NAME="GibbsEnsembleState" VERSION="3.0">
+            <PROPERTIES/>
+         </STATE>
+      </LOGICITEM>
+   </LOGICS>
+</EXTENSION>
